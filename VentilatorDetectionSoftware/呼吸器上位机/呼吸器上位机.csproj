@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{470ED6F9-743E-439B-86B1-BEE40CA3D547}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>呼吸器上位机</RootNamespace>
+    <AssemblyName>呼吸器上位机</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="倒计时器.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="倒计时器.Designer.cs">
+      <DependentUpon>倒计时器.cs</DependentUpon>
+    </Compile>
+    <Compile Include="串口设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="串口设置.Designer.cs">
+      <DependentUpon>串口设置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="单个界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="单个界面.Designer.cs">
+      <DependentUpon>单个界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="图像刷新\动态呼吸阻力测试1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="图像刷新\动态呼吸阻力测试1.Designer.cs">
+      <DependentUpon>动态呼吸阻力测试1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="提示窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="提示窗口.Designer.cs">
+      <DependentUpon>提示窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="提示\扫描.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="提示\扫描.Designer.cs">
+      <DependentUpon>扫描.cs</DependentUpon>
+    </Compile>
+    <Compile Include="呼吸器测试.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="呼吸器测试.Designer.cs">
+      <DependentUpon>呼吸器测试.cs</DependentUpon>
+    </Compile>
+    <Compile Include="提示\扫描失败1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="提示\扫描失败1.Designer.cs">
+      <DependentUpon>扫描失败1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="提示\扫描失败2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="提示\扫描失败2.Designer.cs">
+      <DependentUpon>扫描失败2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="摆动幅度.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="摆动幅度.Designer.cs">
+      <DependentUpon>摆动幅度.cs</DependentUpon>
+    </Compile>
+    <Compile Include="摆动幅度上限输入.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="摆动幅度上限输入.Designer.cs">
+      <DependentUpon>摆动幅度上限输入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="筛选.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="筛选.Designer.cs">
+      <DependentUpon>筛选.cs</DependentUpon>
+    </Compile>
+    <Compile Include="耗气量测试设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="耗气量测试设置.Designer.cs">
+      <DependentUpon>耗气量测试设置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设置.Designer.cs">
+      <DependentUpon>设置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主界面.Designer.cs">
+      <DependentUpon>主界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设置\呼吸器管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设置\呼吸器管理.Designer.cs">
+      <DependentUpon>呼吸器管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设置\更改密码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设置\更改密码.Designer.cs">
+      <DependentUpon>更改密码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设置\测试记录.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设置\测试记录.Designer.cs">
+      <DependentUpon>测试记录.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设置\用户管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设置\用户管理.Designer.cs">
+      <DependentUpon>用户管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="设置\系统设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设置\系统设置.Designer.cs">
+      <DependentUpon>系统设置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="提示\用户管理密码校验.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="提示\用户管理密码校验.Designer.cs">
+      <DependentUpon>用户管理密码校验.cs</DependentUpon>
+    </Compile>
+    <Compile Include="登录.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="登录.Designer.cs">
+      <DependentUpon>登录.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="系统设置\传感器校验.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\传感器校验.Designer.cs">
+      <DependentUpon>传感器校验.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统设置\检验周期和提醒设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统设置\检验周期和提醒设置.Designer.cs">
+      <DependentUpon>检验周期和提醒设置.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="倒计时器.resx">
+      <DependentUpon>倒计时器.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="串口设置.resx">
+      <DependentUpon>串口设置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主界面.resx">
+      <DependentUpon>主界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="单个界面.resx">
+      <DependentUpon>单个界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="图像刷新\动态呼吸阻力测试1.resx">
+      <DependentUpon>动态呼吸阻力测试1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="提示窗口.resx">
+      <DependentUpon>提示窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="提示\扫描.resx">
+      <DependentUpon>扫描.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="呼吸器测试.resx">
+      <DependentUpon>呼吸器测试.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="提示\扫描失败1.resx">
+      <DependentUpon>扫描失败1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="提示\扫描失败2.resx">
+      <DependentUpon>扫描失败2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="摆动幅度.resx">
+      <DependentUpon>摆动幅度.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="摆动幅度上限输入.resx">
+      <DependentUpon>摆动幅度上限输入.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="筛选.resx">
+      <DependentUpon>筛选.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="耗气量测试设置.resx">
+      <DependentUpon>耗气量测试设置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设置.resx">
+      <DependentUpon>设置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设置\呼吸器管理.resx">
+      <DependentUpon>呼吸器管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设置\更改密码.resx">
+      <DependentUpon>更改密码.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设置\测试记录.resx">
+      <DependentUpon>测试记录.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设置\用户管理.resx">
+      <DependentUpon>用户管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="设置\系统设置.resx">
+      <DependentUpon>系统设置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="提示\用户管理密码校验.resx">
+      <DependentUpon>用户管理密码校验.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="登录.resx">
+      <DependentUpon>登录.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\传感器校验.resx">
+      <DependentUpon>传感器校验.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统设置\检验周期和提醒设置.resx">
+      <DependentUpon>检验周期和提醒设置.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MediaPlayer">
+      <Guid>{22D6F304-B0F6-11D0-94AB-0080C74C7E95}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPDXMLib">
+      <Guid>{73F0DD5C-D071-46B6-A8BF-897C84EAAC49}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLauncher">
+      <Guid>{5CB42160-CD7C-4806-9367-1C4A65153F4A}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="图片素材\登录背景.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="图片素材\按键.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="图片素材\登录框.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="图片素材\红灯.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="图片素材\绿灯.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="视频\教学视频.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="图片素材\warning.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="图片素材\warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cfg.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
